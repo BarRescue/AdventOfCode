@@ -17,8 +17,18 @@ def solve_puzzle():
         else:
             calories_counted += int(line.strip())
 
-    calories.sort()
-    print(calories)
+    calories.sort(reverse=True)
+
+    # Part one
+    print(calories[0])
+
+    # Part two
+    three_elves = 0
+    for index in range(3):
+        three_elves += calories[index]
+
+    print(three_elves)
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
